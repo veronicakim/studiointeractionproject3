@@ -8,10 +8,44 @@
 
 	<style>
 
+			.circle{
+				width: 0px;
+				height: 0px;
+				position: fixed;
+				border-radius: 50%;
+				opacity: 12%;
+				filter: blur(10px);
+			}
+
 		body {
 			width: 1400px;
 			background: #7A887A;
 		}
+
+			#triangle-down {
+			    width: 0;
+			    height: 0;
+			    border-left: 12px solid transparent;
+			    border-right: 12px solid transparent;
+			    border-top: 25px solid white;
+		    	position: fixed;
+				left: 94%;
+				top: 86%;
+				transition: border 1s;
+				opacity: 40%;
+		    }
+
+		    #triangle-down:hover {
+			    width: 0;
+			    height: 0;
+			    border-left: 12px solid transparent;
+			    border-right: 12px solid transparent;
+			    border-top: 50px solid white;
+		    	position: fixed;
+				left: 94%;
+				top: 86%;
+				opacity: 40%;
+		    }
 
 		.twentyfourtop {
 			font-family: 'EB Garamond', serif;
@@ -22,10 +56,10 @@
 			margin-top: 200px;
 		}
 
-		.fourteen {
+		.sixteen {
 			font-family: 'EB Garamond', serif;
-			font-size: 14px;
-			line-height: 18px;
+			font-size: 16px;
+			line-height: 20px;
 			color: white;
 			text-align: center;
 			margin-top: 20px;
@@ -59,8 +93,7 @@
 
 				.back {
 					font-family: 'EB Garamond', serif;
-					font-size: 14px;
-					line-height: 16px;
+					font-size: 16px;
 					color: white;
 
 					text-align: right;
@@ -71,7 +104,7 @@
 
 					#back {
 						color: white;
-						transition: color 0.2s;
+						transition: color 1s;
 					}
 					#back:hover {
 						color: #16181A;
@@ -83,12 +116,14 @@
 
 <body>
 
+	<div id="triangle-down"></div>
+
 	<p class="twentyfourtop">
 		I imagine what it would be like to open my hand, <br>
 		gently, so that a feather or a bird could land on it
 	</p>
 
-	<p class="fourteen">
+	<p class="sixteen">
 		(I know how cheesy that sounds, but I say it anyway). 
 	</p>
 
@@ -96,7 +131,7 @@
 		I dial down the seven inputs of experience 
 	</p>
 
-	<p class="fourteen">
+	<p class="sixteen">
 		(five senses, thoughts, and feelings) 
 	</p>
 
@@ -114,6 +149,8 @@
 	<p class="back">
 		<a id="back" href= "index.html">back</a>
 	</p>
+
+	<script src = "page5.js"></script>
 
 </body>
 

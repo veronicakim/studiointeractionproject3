@@ -6,6 +6,15 @@
 
 	<style>
 
+			.circle{
+				width: 0px;
+				height: 0px;
+				position: fixed;
+				border-radius: 50%;
+				opacity: 12%;
+				filter: blur(10px);
+			}
+
 		a {
 			text-decoration: none;
 			color:white;
@@ -19,52 +28,30 @@
 			margin:0px;
 		}
 
-			.dots {
-				position: fixed;
-				left: 90%;
-				top: 68%;
-				height: 350px;
-				display: flex;
-			}
-			.dots:hover {
-				transform: scale(1.5);
-			}
+			#triangle-right {
+		    	width: 0;
+		    	height: 0;
+		    	border-top: 12px solid transparent;
+		    	border-left: 25px solid white;
+		    	border-bottom: 12px solid transparent;
+		    	position: fixed;
+				left: 91%;
+				top: 86%;
+				transition: border 1s;
+				opacity: 40%;
+		    }
 
-				#dot1 {
-					font-family: 'EB Garamond', serif;
-					font-size: 80px;
-					color: white;
-					flex: 1;
-				}
-					/*#dot1:hover {
-						font-size: 100px;
-						line-height: 50px;
-						letter-spacing: 10px;
-					}*/
-
-				#dot2 {
-					font-family: 'EB Garamond', serif;
-					font-size: 80px;
-					color: white;
-					flex: 1;
-				}
-					#dot2:hover {
-						font-size: 110px;
-						line-height: 25px;
-						letter-spacing: 10px;
-					}
-
-				#dot3 {
-					font-family: 'EB Garamond', serif;
-					font-size: 80px;
-					color: white;
-					flex: 1;
-				}
-					#dot3:hover {
-						font-size: 120px;
-						line-height: 0px;
-						letter-spacing: 10px;
-					}
+		    #triangle-right:hover {
+		    	width: 0;
+		    	height: 0;
+		    	border-top: 12px solid transparent;
+		    	border-left: 50px solid white;
+		    	border-bottom: 12px solid transparent;
+		    	position: fixed;
+				left: 91%;
+				top: 86%;
+				opacity: 40%;
+	   		}
 
 		.head {
 			position: absolute;
@@ -100,13 +87,13 @@
 			width: 425px;
 			height: 34px;
 			left: 117px;
-			top: 550px;	
+			top: 510px;	
 		}
 
-			.fourteen {
+			.sixteen {
 				font-family: 'EB Garamond', serif;
-				font-size: 14px;
-				line-height: 20px;
+				font-size: 17px;
+				line-height: 22px;
 				color: white;
 				margin: 5px;
 				text-align: left;
@@ -121,7 +108,7 @@
 		}
 			#link1 {
 				color: white;
-				transition: color 0.2s;
+				transition: color .2s;
 			}
 			#link1:hover { color: #C7AA9A; }
 
@@ -134,9 +121,9 @@
 		}
 			#link2 {
 				color: white;
-				transition: color 0.2s;
+				transition: color 1s;
 			}
-			#link2:hover { color: #ABABB8; }
+			#link2:hover { color: #838aa3; }
 
 		.button3 {
 			position: absolute;
@@ -147,9 +134,9 @@
 		}
 			#link3 {
 				color: white;
-				transition: color 0.2s;
+				transition: color 1s;
 			}
-			#link3:hover { color: #878F9A; }
+			#link3:hover { color: #73828c; }
 
 		.button4 {
 			position: absolute;
@@ -160,7 +147,7 @@
 		}
 			#link4 {
 				color: white;
-				transition: color 0.2s;
+				transition: color 1s;
 			}
 			#link4:hover { color: #DDC077; }
 
@@ -173,7 +160,7 @@
 		}
 			#link5 {
 				color: white;
-				transition: color 0.2s;
+				transition: color 1s;
 			}
 			#link5:hover { color: #7A887A; }
 
@@ -207,10 +194,11 @@
 
 		.bottom2 {
 			position: absolute;
-			width: 279px;
+			width: 350px;
 			height: 247px;
-			left: 7470px;
-			top: 310px;
+			left: 7400px;
+			top: 275px;
+			margin-right: 20px;
 		}
 
 			.twentyfourright {
@@ -225,10 +213,10 @@
 				text-align: right;
 			}
 
-			.fourteenright {
+			.sixteenright {
 				font-family: 'EB Garamond', serif;
-				font-size: 14px;
-				line-height: 20px;
+				font-size: 16px;
+				line-height: 22px;
 				color: white;
 				margin: 5px;
 				text-align: right;
@@ -240,11 +228,7 @@
 
 <body>
 
-	<div class="dots">
-		<p id="dot1">.</p>
-		<p id="dot2">.</p>
-		<p id="dot3">.</p>
-	</div>
+	<div id="triangle-right"></div>
 
 	<div class="head">
 
@@ -259,7 +243,7 @@
 	</div>
 
 	<div class="bottom1">
-		<p class="fourteen">
+		<p class="sixteen">
 			Documentary filmmaker, cinematographer, and photographer Hope Hall offers a few strategies for when you're feeling stressed out and overwhelmed.
 		</p>
 	</div>
@@ -326,13 +310,15 @@
 
 	<div class="bottom2">
 		<p class="twentyfourright">Hope Hall</p>
-		<p class="fourteenright">
+		<p class="sixteenright">
 			Filmmaker, Cinematographer, <br>
 			Photographer, Teacher
 			<br>
 			<br>
 			Hope Hall is a documentary filmmaker, cinematographer, photographer, and teacher. Her short films have been selected for over 40 film festivals worldwide and have received numerous awards. From May 2011 onward, she was President Obama's Principal Videographer at the White House. (She began working for President Obama during his 2008 campaign as part of the video road team in the New Media Department.) She is in the research phase of what comes next.
 		</p>
+
+	<script src = "index.js"></script>
 
 </body>
 

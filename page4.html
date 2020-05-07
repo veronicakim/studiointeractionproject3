@@ -7,10 +7,44 @@
 
 	<style>
 
+			.circle{
+				width: 0px;
+				height: 0px;
+				position: fixed;
+				border-radius: 50%;
+				opacity: 12%;
+				filter: blur(10px);
+			}
+			
 		body {
 			width: 1400px;
 			background: #DDC077;
 		}
+
+			#triangle-down {
+			    width: 0;
+			    height: 0;
+			    border-left: 12px solid transparent;
+			    border-right: 12px solid transparent;
+			    border-top: 25px solid white;
+		    	position: fixed;
+				left: 94%;
+				top: 86%;
+				transition: border 1s;
+				opacity: 40%;
+		    }
+
+		    #triangle-down:hover {
+			    width: 0;
+			    height: 0;
+			    border-left: 12px solid transparent;
+			    border-right: 12px solid transparent;
+			    border-top: 50px solid white;
+		    	position: fixed;
+				left: 94%;
+				top: 86%;
+				opacity: 40%;
+		    }
 
 		.twentyfour {
 			font-family: 'EB Garamond', serif;
@@ -47,8 +81,7 @@
 
 				.back {
 					font-family: 'EB Garamond', serif;
-					font-size: 14px;
-					line-height: 16px;
+					font-size: 16px;
 					color: white;
 
 					text-align: right;
@@ -59,7 +92,7 @@
 
 					#back {
 						color: white;
-						transition: color 0.2s;
+						transition: color 1s;
 					}
 					#back:hover {
 						color: #16181A;
@@ -70,6 +103,8 @@
 </head>
 
 <body>
+
+	<div id="triangle-down"></div>
 
 	<p class="twentyfour">I smile & wave at the world and say,</p>
 
@@ -89,6 +124,8 @@
 	<p class="back">
 		<a id="back" href= "index.html">back</a>
 	</p>
+
+	<script src = "page4.js"></script>
 
 </body>
 

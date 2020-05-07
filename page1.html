@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>breathe</title>
+	<title>page1</title>
 	<link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
 
 	<style>
+
+			.circle{
+				width: 0px;
+				height: 0px;
+				position: fixed;
+				border-radius: 50%;
+				opacity: 12%;
+				filter: blur(10px);
+			}
 		
 		body {
 			background: #C7AA9A;
@@ -14,51 +23,30 @@
 			margin:0px;
 		}
 
-			/*.dots {
-				position: fixed;
-				left: 102%;
-				top: 80%;
-				display: flex;
-				transform-origin: 0 0;
-  				transform: rotate(90deg);
-  				margin:0px;
-			}
+			#triangle-down {
+			    width: 0;
+			    height: 0;
+			    border-left: 12px solid transparent;
+			    border-right: 12px solid transparent;
+			    border-top: 25px solid white;
+		    	position: fixed;
+				left: 93%;
+				top: 85%;
+				transition: border 1s;
+				opacity: 40%;
+		    }
 
-			.dots:hover {
-				transform: scale(1.5);
-				transform-origin: 0 0;
- 				transform: rotate(90deg);
- 				margin:0px;
-			}
-
-				#dot1 {
-					font-family: 'EB Garamond', serif;
-					font-size: 80px;
-					color: white;
-					flex: 1;
-				}
-
-				#dot2 {
-					font-family: 'EB Garamond', serif;
-					font-size: 80px;
-					color: white;
-					flex: 1;
-				}
-					#dot2:hover {
-						font-size: 110px;
-						line-height: 0px;
-					}
-
-				#dot3 {
-					font-family: 'EB Garamond', serif;
-					font-size: 80px;
-					color: white;
-					flex: 1;
-				}
-					#dot3:hover {
-						font-size: 120px;
-						line-height: 0px;
-					}*/
+		    #triangle-down:hover {
+			    width: 0;
+			    height: 0;
+			    border-left: 12px solid transparent;
+			    border-right: 12px solid transparent;
+			    border-top: 50px solid white;
+		    	position: fixed;
+				left: 93%;
+				top: 85%;
+				opacity: 40%;
+		    }
 
 		.box {
 			margin-top: 110px;
@@ -248,8 +236,7 @@
 
 				.back {
 					font-family: 'EB Garamond', serif;
-					font-size: 14px;
-					line-height: 16px;
+					font-size: 16px;
 					color: white;
 
 					text-align: right;
@@ -261,7 +248,7 @@
 
 					#back {
 						color: white;
-						transition: color 0.2s;
+						transition: color 1s;
 					}
 					#back:hover {
 						color: #16181A;
@@ -273,11 +260,7 @@
 
 <body>
 
-	<!-- <div class="dots">
-		<p id="dot1">.</p>
-		<p id="dot2">.</p>
-		<p id="dot3">.</p>
-	</div> -->
+	<div id="triangle-down"></div>
 
 	<div class="box">
 
@@ -355,6 +338,10 @@
 		<p class="back">
 			<a id="back" href= "index.html">back</a>
 		</p>
+
+	</div>
+
+	<script src = "page1.js"></script>
 
 </body>
 
